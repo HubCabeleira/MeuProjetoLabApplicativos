@@ -1,5 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_application_4/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,17 +11,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePage(),
+      home: PreviewPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-  _HomePageState createState() => _HomePageState();
+class PreviewPage extends StatefulWidget {
+  const PreviewPage({Key? key}) : super(key: key);
+
+  _PreviewPageState createState() => _PreviewPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _PreviewPageState extends State<PreviewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,16 +37,39 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-              TextButton(style: TextButton.styleFrom(backgroundColor: Colors.orange, fixedSize: const Size(75, 75), shape: const CircleBorder()), onPressed: null, child: Text('EXIT', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700))),
+              TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      fixedSize: const Size(75, 75),
+                      shape: const CircleBorder()),
+                  onPressed: null,
+                  child: const Text('EXIT',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700))),
             ]),
             Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-              TextButton(style: TextButton.styleFrom(backgroundColor: Colors.orange, fixedSize: const Size(75, 75), shape: const CircleBorder()), onPressed: null, child: Text('NEXT', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)))
+              TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      fixedSize: const Size(75, 75),
+                      shape: const CircleBorder()),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage()));
+                  },
+                  child: const Text('NEXT',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700)))
             ])
           ],
         ),
       ),
       appBar: AppBar(
-        title: Text("Personal Book"),
+        title: const Text("Personal Book"),
         backgroundColor: Colors.orange,
       ),
       drawer: Drawer(
@@ -54,7 +80,11 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 color: Colors.orange,
               ),
-              child: const Text("ENTERPRISE\n Contact", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
+              child: Text("ENTERPRISE\n Contact",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700)),
             ),
             ListTile(
               title: const Text('FACEBOOK '),
