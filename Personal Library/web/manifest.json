@@ -1,6 +1,6 @@
 {
-    "name": "hello_world",
-    "short_name": "hello_world",
+    "name": "flutter_application_4",
+    "short_name": "flutter_application_4",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
