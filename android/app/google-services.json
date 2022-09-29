@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977950529845",
+    "project_id": "autenticador-24153",
+    "storage_bucket": "autenticador-24153.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977950529845:android:316116ae91a3b40d03d47c",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_18"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977950529845-q9tq5io05ogm50br24vv3vri26vgcc04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9VbnHUwIhhhEnXXldkwdXgOMqwwZuDrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977950529845-q9tq5io05ogm50br24vv3vri26vgcc04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
